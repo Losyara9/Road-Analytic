@@ -1,0 +1,19 @@
+numpy
+opencv-python-headless>=4.5.1  # Для обработки видео и работы с кадрами
+
+lxml
+
+# для работы с YOLOv5
+torch>=1.7
+torchvision>=0.8
+
+# YOLOv5 и его зависимости
+matplotlib
+pillow>=7.1.2
+tqdm
+PyYAML>=5.3
+seaborn
+psutil
+
+# Визуализация
+tensorboard
