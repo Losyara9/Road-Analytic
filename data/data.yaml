@@ -1,8 +1,0 @@
-train: C:/Users/bekh-/PycharmProjects/AnalyticProject/data/images/train/frames2  # Путь к тренировочным данным
-val: C:/Users/bekh-/PycharmProjects/AnalyticProject/data/images/train/frames2     # Путь к валидационным данным
-
-nc: 3
-names:
-  0: Car
-  1: Truck
-  2: Motorcycle
