@@ -28,6 +28,6 @@ def extract_frames(video_path, output_dir, frame_rate=1):
     print(f"Извлечено и сохранено {saved_count} кадров в '{output_dir}'.")
 
 
-extract_frames("E:\\los1\\uechebnoe\\kurs3\\detection\\video\\road.mp4",
-               "E:\\los1\\uechebnoe\\kurs3\\detection\\frames",
+extract_frames("E:\\los1\\uechebnoe\\kurs3\\detection\\video\\road2.mp4",
+               "E:\\los1\\uechebnoe\\kurs3\\detection\\frames_new",
                frame_rate=10)

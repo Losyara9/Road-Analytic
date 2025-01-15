@@ -22,7 +22,7 @@ def get_bbox_center(xmin, ymin, xmax, ymax):
     return (xmin + xmax) / 2, (ymin + ymax) / 2
 
 # Загрузка модели
-model = YOLO("runs/detect/train4/weights/best.pt")
+model = YOLO("runs2/detect/train/weights/best.pt")
 
 # Функция для получения списка путей ко всем изображениям в директории
 def get_frame_paths(directory, extensions=(".jpg", ".png", ".jpeg")):
@@ -108,15 +108,20 @@ def analyze_frames(frame_paths, zones, fps):
 
     return results_summary
 
-input_directory = "C:/Users/bekh-/PycharmProjects/AnalyticProject/data/images/train/frames2"
+# Основной вызов функций
+input_directory = "C:/Users/bekh-/PycharmProjects/AnalyticProject/check_frames"
 frame_paths = get_frame_paths(input_directory)
 fps = 30  # Реальная частота кадров видео
 
 results = analyze_frames(frame_paths, zones, fps)
 
-# Сохранение результатов аналитики
-with open("results.json", "w") as f:
-    json.dump(results, f, indent=4)
+# Проверка и сохранение результатов аналитики
+if results:
+    with open("results.json", "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=4)
+    print("Результаты аналитики сохранены в 'results.json'.")
+else:
+    print("Анализ завершен, но результаты пусты. Проверьте обработку данных.")
 
 # Печать итогов аналитики
 for zone, data in results.items():
@@ -124,3 +129,4 @@ for zone, data in results.items():
     print(f"  Плотность: {data['density']}")
     print(f"  Интенсивность: {data['intensity']}")
     print(f"  Средняя скорость: {data['average_speed']:.2f} пикселей/сек")
+

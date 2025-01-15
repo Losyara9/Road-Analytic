@@ -1,0 +1,6 @@
+train: merged_dataset/train/images
+val: merged_dataset/valid/images
+test: merged_dataset/test/images
+
+nc: 9
+names: ['bus', 'car', 'jeep', 'lorry', 'minibus', 'minivan', 'motorcycle', 'road train', 'truck']
