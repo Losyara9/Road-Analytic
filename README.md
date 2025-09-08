@@ -13,7 +13,6 @@
 
 -   **Язык программирования:** Python 3.x
 -   **Обработка данных:** OpenCV, Pandas, NumPy
--   **Аналитика:** Сustom algorithms for object tracking and metric calculation
 -   **Сохранение результатов:** JSON
 
 ## Ключевые метрики анализа
